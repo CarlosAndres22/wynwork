@@ -11,6 +11,14 @@ class MyClass
   end
 end
 
+
+class YourClass < MyClass
+
+end
+
 mine = MyClass.new
+yours = YourClass.new
+
+puts yours
 p mine
 puts mine
