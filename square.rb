@@ -6,6 +6,7 @@ class Square
   end
 
     def area
+      @side_length = side_length
       area = side_length * side_length
     end
 
