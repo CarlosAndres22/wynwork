@@ -2,13 +2,18 @@ require 'httparty'
 require   'json'
 require 'nokogiri'
 
-# method, url = ARGV
-#
-# puts method
-# puts url
+method, url = ARGV
+
+puts method
+puts url
 
 
+response = nil
 
-http_path = ARGV
-p http_path
-#just want to keep github streak again
+if method == "GET"
+  response = HTTParty.get(url)
+elsif method == "POST"
+  response = HTTPartu.post(url)
+end
+
+p response.headers, response.body
