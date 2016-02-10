@@ -13,7 +13,7 @@ response = nil
 if method == "GET"
   response = HTTParty.get(url)
 elsif method == "POST"
-  response = HTTPartu.post(url)
+  response = HTTParty.post(url)
 end
 
 p response.headers, response.body
