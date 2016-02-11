@@ -1,0 +1,30 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing All Items To Do</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>To Do List</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todo_items.each do |todo_item| %>
+      <tr>
+        <td><%= todo_item.description %></td>
+        <td><%= link_to 'Show', todo_item %></td>
+        <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
+        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Todo item', new_todo_item_path %>
