@@ -19,5 +19,7 @@ puts  "Stevies Badges : #{badges}"
 
 
 borderlands2Players = Steam::UserStats.player_count(49520)
+littleInfernoPlayers = Steam::UserStats.player_count(221260)
 
+puts "The amount of players playing Little Inferno is #{littleInfernoPlayers} players! Almost no one!"
 puts "The amount of players playing Borderlands 2 is #{borderlands2Players} players!"
