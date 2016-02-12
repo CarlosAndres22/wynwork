@@ -16,7 +16,7 @@
     <center>
 
       <form method="get" action="http://store.steampowered.com/search/?snr=1_4_4__12&term=" id="searchbox">
-      <input type="text" class="text" id="term" name="displayterm" onfocus="if(this.value=='enter search term'){this.value=''}" onchange="$('realterm').value= (this.value=='enter search term') ? '' : this.value" onblur="if(this.value==''){this.value='enter search term';}" value="enter search term" maxlength="64" autocomplete="off">
+      <input type="text" class="text" id="term" name="displayterm" onfocus="if(this.value=='enter game title'){this.value=''}" onchange="$('realterm').value= (this.value=='enter game title') ? '' : this.value" onblur="if(this.value==''){this.value='enter game title';}" value="enter game title" maxlength="64" autocomplete="off">
       <!-- <input type="submit" value="Game Search" /> -->
       <button class="btn btn-primary" name="search">Find Games</button>
       </form>
@@ -24,7 +24,10 @@
   </center>
 
 
-      <center> <button class="btn btn-primary btn-lg" name="button">Find Buddies</button> </center>
+      <center> <button class="btn btn-primary btn-lg" name="button">Find Buddies</button>
+        <form method="get" action="http://steamcommunity.com/id/steviethewizard/friends/coplay/" id="recent">
+       <button class="btn btn-primary btn-lg" name="recentbutton" >Recent Buddies</button></center>
+     </form>
   </div>
   </body>
 </html>

@@ -2,15 +2,23 @@ body {
   background-image: url('https://wallpaperscraft.com/image/minecraft_planet_cube_cubes_world_2228_3840x2160.jpg');
   background-size: 106%;
 }
-
+h1 {
+  font-size: 105px;
+}
 .interface {
   position: fixed;
  top: 50%;
  left: 50%;
- margin-top: -50px;
- margin-left: -100px;
+ margin-top: -170px;
+ margin-left: -340px;
 }
 
 #title{
   color: purple;
+}
+
+#recent{
+  position: fixed;
+  top: 51.5%;
+  left: 33%
 }
