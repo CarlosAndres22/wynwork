@@ -1,0 +1,35 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+body {
+  background-image: url('http://wallpaperlayer.com/img/2015/1/blurred-image-7588-7881-hd-wallpapers.jpg');
+}
+img {
+  width: 300px;
+}
+
+#cards {
+  padding: .5em .5em .5em 3em;
+  vertical-align: middle;
+}
+
+th {
+  text-align: right;
+  background: rgba(239, 221, 166, 0.43);
+}
+
+td              {
+  position: relative;
+  overflow: hidden;
+  width: 225px;
+  height: 225px;
+}
+
+ img {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 100px; /* adjust to your pleasure */
+
+}
