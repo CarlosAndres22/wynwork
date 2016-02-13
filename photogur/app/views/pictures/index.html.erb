@@ -3,8 +3,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Pictures</h1>
-
+              <div class="flip-3d"> 
 <table id="cards">
+
   <thead>
     <tr>
       <th>Triva</th>
@@ -16,16 +17,39 @@
   <tbody>
     <% @pictures.each do |picture| %>
       <tr>
-        <td><%= picture.title %></td>
-        <td><img src="<%= picture.url %>"></td>
+
+ <td class="title"><%= picture.title %></td>
+      <figure>  <td><img src="<%= picture.url %>"></td> </figure>
         <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
         <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </div>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
 <%= link_to 'New Picture', new_picture_path %>
+
+     <!-- practice shit -->
+     <div class="flip-3d">
+  <figure>
+    <img src="http://demosthenes.info/assets/images/thumbnails/yacht.jpg" alt="">
+    <figcaption>Yacht</figcaption>
+</figure>
+</div>
+
+<div class="flip-3d">
+  <figure>
+    <img src="http://demosthenes.info/assets/images/thumbnails/bee.jpg" alt="">
+    <figcaption>Bee</figcaption>
+  </figure>
+  </div>
+<div class="flip-3d">
+  <figure>
+    <img src="http://demosthenes.info/assets/images/thumbnails/queenstown.jpg" alt="">
+    <figcaption>Queenstown</figcaption>
+  </figure>
+</div>
