@@ -1,9 +1,20 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/journal/bootstrap.min.css" rel="stylesheet" integrity="sha256-fHWoqb8bPKjLiC7AuV6qy/lt0hrzfwM0ciyAu7Haf5w= sha512-3t2GeiCRNeKhZnUaUMygGiLKZzb/vPhvfw3y1Rt2FCwKuRaLVrOCTpavIYsZ4xqM52mbO7M93NaXbm/9dOA2Og==" crossorigin="anonymous">
 
+<script>
+$('#go').click(function() {
+    var page1 = $('.image');
+    var page2 = $('.title');
+    var toHide = page1.is(':visible') ? page1 : page2;
+    var toShow = page2.is(':visible') ? page1 : page2;
+
+    toHide.removeClass('flip in').addClass('flip out').hide();
+    toShow.removeClass('flip out').addClass('flip in').show();
+});
+</script>
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Pictures</h1>
-              <div class="flip-3d"> 
+
 <table id="cards">
 
   <thead>
@@ -19,7 +30,7 @@
       <tr>
 
  <td class="title"><%= picture.title %></td>
-      <figure>  <td><img src="<%= picture.url %>"></td> </figure>
+       <td class="image"><button type="button" id="go">FLIP</button><img src="<%= picture.url %>"></td>
         <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
         <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
