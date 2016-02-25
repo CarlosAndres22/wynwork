@@ -7,9 +7,10 @@ require 'steam-api'
 myKey =  Steam.apikey = '0A463EAFB6E13E056D776D43B5C1F4D2'
 
 myId = Steam::User.vanity_to_steamid("steviethewizard")
-
+# .recently_played_games(steamid, params: {})
+# myRecentlyPlayed = Steam::User.recently_played_games(myId)
 puts myId
-
+# puts myRecentlyPlayed
 myLevel = Steam::Player.steam_level(myId)
 
 puts "My steam level is #{myLevel}"
