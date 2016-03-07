@@ -5,11 +5,12 @@ require 'steam-api'
 # end
 
 myKey =  Steam.apikey = '0A463EAFB6E13E056D776D43B5C1F4D2'
-
+#TODO find by the steam id any different way
 myId = Steam::User.vanity_to_steamid("steviethewizard")
 myPlayerSummary = Steam::User.summary(myId)
 # display player name
 player_name = myPlayerSummary["personaname"]
+p myPlayerSummary
 puts player_name
 # .recently_played_games(steamid, params: {})
 myRecentlyPlayed = Steam::Player.recently_played_games(myId, params: {})
