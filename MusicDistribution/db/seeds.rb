@@ -6,13 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 artist_list = [
-              ['The Doors'],
-              ['The Doors'],
-              ['Pink Floyd'],
-              ['Ozzy Osbourne'],
-              ['DJ Dado'],
-              ['The Killers'],
-              ['The Who']
+              'The Doors',
+              'The Doors',
+              'Pink Floyd',
+              'Ozzy Osbourne',
+              'DJ Dado',
+              'The Killers',
+              'The Who'
               ]
 
   artist_list.each do |name|

@@ -3,5 +3,15 @@
   <%= search_field_tag :term %>
   <%= submit_tag "Go!" %>
 <% end %>
-<%= params[:term] %>
-                </center>
+
+
+
+<h2>Search Results</h2>
+<% if @results.empty? %>
+FUCKING SEARCH AGAIN.
+<% else %>
+FUCK YEA WE FOUND
+  <% @results.each do |result| %>
+    <p><%= result.name  %></p>
+  <% end %>
+<% end %></center>
