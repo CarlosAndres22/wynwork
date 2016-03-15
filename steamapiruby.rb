@@ -21,7 +21,7 @@ myLevel = Steam::Player.steam_level(myId)
 puts "My steam level is #{myLevel}"
 
 # badges = Steam::Player.badges(myId)
-# puts  "Stevies Badges : #{badges}" 
+# puts  "Stevies Badges : #{badges}" aka achievments 
 
 
 borderlands2Players = Steam::UserStats.player_count(49520)
